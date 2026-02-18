@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>인도네시아어 학습</title>
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",sans-serif;background:#FFF8F0;color:#2D3436;min-height:100vh}
+img.emoji{height:1em;width:1em;margin:0 .05em 0 .1em;vertical-align:-0.1em}
+.pic img.emoji{height:56px;width:56px}
+.em img.emoji{height:40px;width:40px}
+.se img.emoji{height:24px;width:24px}
+.nb img.emoji{height:24px;width:24px}
+.co img.emoji{height:32px;width:32px}
+.rb img.emoji{height:20px;width:20px}
+.es .em img.emoji{height:56px;width:56px}
+.hd{background:linear-gradient(135deg,#FF6B35,#FF8C42,#FFD166);color:#fff;padding:12px 16px;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(255,107,53,.3)}
+.hd-in{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:10px}
+.bk{background:rgba(255,255,255,.25);border:none;color:#fff;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;display:none;flex-shrink:0;align-items:center;justify-content:center}.bk:active{transform:scale(.9)}
+.hd-txt{flex:1;min-width:0}
+.ht{font-size:17px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hs{font-size:10px;opacity:.85}
+.hp{margin-top:3px}.pb{height:5px;background:rgba(255,255,255,.3);border-radius:3px;overflow:hidden}.pf{height:100%;background:#fff;border-radius:3px;transition:width .3s}.pt{font-size:10px;opacity:.8;margin-top:1px;text-align:right}
+.ct{max-width:600px;margin:0 auto;padding:12px}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mc{background:#fff;border-radius:18px;padding:16px 10px;text-align:center;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.06);border:3px solid transparent;position:relative;overflow:hidden;transition:.2s}.mc:active{transform:scale(.95)}
+.mc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.mc .em{font-size:40px;display:block;margin-bottom:6px;line-height:1.2}.mc .lb{font-size:14px;font-weight:700;margin-bottom:2px}.mc .cn{font-size:10px;color:#636E72}
+.c1::before{background:#FF6B35}.c1{border-color:#FFE0D0}
+.c2::before{background:#118AB2}.c2{border-color:#D0EFFF}
+.c3::before{background:#7B2D8E}.c3{border-color:#E8D0F0}
+.c4::before{background:#06D6A0}.c4{border-color:#D0F5E8}
+.c5::before{background:#F77F00}.c5{border-color:#FFE0B0}
+.c6::before{background:#073B4C}.c6{border-color:#D0E8F0}
+.sl{display:flex;flex-direction:column;gap:8px}
+.si{background:#fff;border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.05);border-left:5px solid #FF6B35;transition:.2s}.si:active{transform:scale(.97)}
+.si .se{font-size:24px}.si .sn{font-size:13px;font-weight:600;flex:1}.si .sc{font-size:10px;color:#636E72;background:#f0f0f0;padding:2px 8px;border-radius:8px}
+.mt{display:flex;gap:6px;margin-bottom:10px;justify-content:center}
+.mb{padding:7px 14px;border:2px solid #ddd;background:#fff;border-radius:18px;cursor:pointer;font-size:12px;font-weight:600}.mb.a{background:#FF6B35;color:#fff;border-color:#FF6B35}
+.cw{width:100%;max-width:360px;margin:0 auto 10px;position:relative;touch-action:pan-y}
+.card{background:#fff;border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,.1);padding:20px 16px;text-align:center;min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.card .pic{font-size:56px;margin-bottom:8px;filter:drop-shadow(2px 3px 6px rgba(0,0,0,.1));line-height:1}
+.card .indo{font-size:22px;font-weight:700;color:#118AB2;margin-bottom:3px}
+.card .pron{font-size:13px;color:#EF476F;margin-bottom:3px}
+.card .kor{font-size:18px;font-weight:700;color:#2D3436;margin-bottom:3px}
+.card .ex{font-size:11px;color:#636E72;font-style:italic;margin-bottom:4px}
+.card .note{font-size:10px;color:#7B2D8E;background:#f5f0ff;padding:2px 8px;border-radius:8px}
+.ab2{width:46px;height:46px;border-radius:50%;background:#7B68EE;color:#fff;border:none;font-size:20px;cursor:pointer;margin-top:6px;box-shadow:0 3px 12px rgba(123,104,238,.3);display:flex;align-items:center;justify-content:center}.ab2:active{transform:scale(.9)}
+.swh{font-size:10px;color:#bbb;margin-top:4px}
+.co{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;pointer-events:none;opacity:0;transition:opacity .15s;z-index:10}
+.co.gl{opacity:1;background:rgba(6,214,160,.3);color:#06D6A0}
+.co.gr{opacity:1;background:rgba(239,71,111,.3);color:#EF476F}
+.sh{display:flex;justify-content:space-between;padding:2px 8px;margin-bottom:4px;font-size:11px}
+.sh .l{color:#06D6A0;font-weight:700}.sh .r{color:#EF476F;font-weight:700}
+.cn2{display:flex;gap:12px;justify-content:center;margin-top:8px}
+.nb{width:52px;height:52px;border-radius:50%;border:none;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.12)}.nb:active{transform:scale(.9)}
+.nb.g{background:#06D6A0;color:#fff}.nb.p{background:#7B68EE;color:#fff}.nb.r{background:#EF476F;color:#fff}
+.rb{background:linear-gradient(135deg,#EF476F,#FF8E9E);color:#fff;border-radius:14px;padding:10px 14px;margin-bottom:10px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 3px 12px rgba(239,71,111,.3)}
+.rb img.emoji{height:20px;width:20px}
+.ls{width:100%;padding:9px 12px;border:2px solid #e0e0e0;border-radius:12px;font-size:13px;margin-bottom:8px;background:#fff}
+.lt{width:100%;border-collapse:separate;border-spacing:0 4px}.lt tr{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.04);cursor:pointer}.lt td{padding:6px 8px;font-size:12px}.lt td:first-child{border-radius:8px 0 0 8px;font-weight:600}.lt td:last-child{border-radius:0 8px 8px 0}.lt tr:active{background:#FFF5EE}
+.sec{display:none}.sec.a{display:block}
+.es{text-align:center;padding:28px 16px}.es .em{font-size:56px;display:block;margin-bottom:8px;line-height:1.2}.es .ms{font-size:14px;color:#636E72}
+.qnb{padding:10px 22px;border:none;border-radius:18px;background:#FF6B35;color:#fff;font-size:14px;font-weight:700;cursor:pointer;display:inline-block}.qnb:active{transform:scale(.95)}
+@keyframes fi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.af{animation:fi .3s ease-out}
+</style>
+</head>
+<body>
+<div class="hd"><div class="hd-in">
+<button class="bk" id="bkB" onclick="goBack()">&#8592;</button>
+<div class="hd-txt">
+<div class="ht" id="hT">🇮🇩 인도네시아어 학습</div>
+<div class="hs" id="hS">Belajar Bahasa Indonesia</div>
+<div class="hp" id="hP" style="display:none"><div class="pb"><div class="pf" id="pF"></div></div><div class="pt" id="pT"></div></div>
+</div></div></div>
+<div class="ct">
+<div class="sec a" id="sM"><div class="mg" id="mG"></div></div>
+<div class="sec" id="sS"><div class="sl" id="sL"></div></div>
+<div class="sec" id="sC">
+<div class="mt"><button class="mb a" id="mbC" onclick="setMode('c')">🃏 카드</button><button class="mb" id="mbL" onclick="setMode('l')">📋 리스트</button></div>
+<div id="rBA"></div>
+<div id="cV">
+<div class="sh"><span class="l">&larr; 외웠어요 &#10003;</span><span class="r">&#10007; 못 외웠어요 &rarr;</span></div>
+<div class="cw" id="cwArea">
+<div class="co" id="cO"></div>
+<div class="card" id="theCard">
+<div class="pic" id="cPic"></div>
+<div class="indo" id="cIndo"></div>
+<div class="pron" id="cPron"></div>
+<div class="kor" id="cKor"></div>
+<div class="ex" id="cEx"></div>
+<div class="note" id="cNote"></div>
+<button class="ab2" onclick="spk()">🔊</button>
+<div class="swh">&larr; 밀어서 학습 &rarr;</div>
+</div></div>
+<div class="cn2">
+<button class="nb g" onclick="mOk()">&#10003;</button>
+<button class="nb p" onclick="spk()">🔊</button>
+<button class="nb r" onclick="mNo()">&#10007;</button>
+</div>
+</div>
+<div id="lV" style="display:none"><input class="ls" id="lS" placeholder="🔍 검색..." oninput="fL()"><table class="lt"><tbody id="lB"></tbody></table></div>
+</div>
+</div>
+<script>
+var TP=function(el){if(window.twemoji)twemoji.parse(el||document.body,{folder:'svg',ext:'.svg'})};
+var EM={"나/저":"🧑","당신":"🫵","그/그녀":"👤","우리":"👥","그들":"👫","이것":"👆","저것":"👉","먹다":"🍽️","마시다":"🥤","가다":"🚶","오다":"🏃","보다":"👀","듣다":"👂","말하다":"💬","읽다":"📖","쓰다":"✏️","사다":"🛒","팔다":"🏷️","주다":"🎁","만들다":"🔨","원하다":"💭","할수있다":"💪","알다":"🧠","좋아하다":"❤️","일하다":"👷","자다":"😴","열다":"🚪","닫다":"🔒","기다리다":"⏳","크다":"🐘","작다":"🐜","많다":"📦","적다":"💧","새로운":"✨","오래된":"🏚️","좋은":"👍","나쁜":"👎","비싼":"💎","싼":"🏷️","뜨거운":"🔥","차가운":"🧊","맛있는":"😋","매운":"🌶️","달콤한":"🍯","빠른":"⚡","느린":"🐌","기쁜":"😄","슬픈":"😢","화난":"😡","무서운":"😨","집":"🏠","학교":"🏫","병원":"🏥","시장":"🏪","물":"💧","밥/쌀":"🍚","돈":"💰","길":"🛣️","차":"🚗","사람":"🧑","친구":"🤝","아이":"👶","가족":"👨‍👩‍👧‍👦","음식":"🍲","음료":"🧃","무엇":"❓","누구":"🤷","어디":"📍","언제":"📅","왜":"🤔","어떻게":"💡","얼마":"💲","그리고":"➕","또는":"↔️","하지만":"⚖️","이미":"✅","아직":"⏰","매우":"💯","아버지":"👨","어머니":"👩","형/오빠":"👦","누나/언니":"👧","남동생":"🧒","여동생":"👧","월요일":"1️⃣","화요일":"2️⃣","수요일":"3️⃣","목요일":"4️⃣","금요일":"5️⃣","토요일":"6️⃣","일요일":"7️⃣","지금":"⏰","오늘":"📆","내일":"🌅","어제":"🌙","아침":"🌤️","낮":"☀️","오후":"🌇","밤":"🌙","몇시?":"⏰"};
+var AEM={"가깝다":"📏","가늘다":"〰️","가볍다":"🪶","간단하다":"📋","감다":"😑","강하다/튼튼하다":"💪","같다":"🟰","갚다":"💸","게으르다":"🦥","(배)고프다":"😫","기쁘다":"😄","길다":"📏","깊다":"🌊","깨끗하다":"✨","깨다":"⏰","끄다":"🔌","끝나다":"🏁","끝내다":"✅","나가다":"🚶","나타나다":"👻","날씬하다":"🏃","날카롭다":"🔪","남다":"📦","낫다":"👆","낮다":"⬇️","낯설다":"🤷","내려가다":"⬇️","넓다":"🏖️","느리다":"🐌","늘다":"📈","늙다":"👴","늦다":"⏰","닫다":"🚪","달다":"🍬","당기다":"🏋️","더럽다":"🗑️","더하다":"➕","덥다":"🥵","두껍다":"📕","주다(드리다)":"🎁","들다":"💪","들어가다":"🚪","딱딱하다":"🪨","때리다":"👊","떠나다":"✈️","떠오르다":"🌅","똑똒하다":"🎓","뜨겁다":"♨️","막히다":"🚧","만나다":"🤝","많다":"📦","맑다":"☀️","맛없다":"😖","맞다":"⭕","매다/묶다":"🪢","멀다":"🌍","모르다":"❓","못생기다":"😕","바쁘다":"🏃","밝다":"💡","배우다":"📚","벗다":"👕","보내다":"📧","부드럽다":"🧸","부족하다":"📉","붙다":"📌","비다":"🫙","비슷하다":"🪞","비싸다":"💎","사다":"🛒","살다":"❤️","생기다":"✨","서투르다":"🤹","섞다":"🥣","세다":"💪","쉽다":"🎯","싫다":"👎","싱겁다":"🥣","쓰다":"✏️","아프다":"🤕","얼다":"❄️","없다":"🚫","열리다":"🚪","오다":"🏃","오르다":"⬆️","옳다":"⭕","용감하다":"🦁","울다":"😭","이기다":"🏆","잃다":"😰","잊어버리다":"🧠","작다":"🐜","잘못하다":"❌","잠그다":"🔐","잡다":"✊","재미없다":"😐","접다":"📄","젖다":"💦","조용하다":"🤫","줄다":"📉","줍다":"🤲","착하다":"😇","찾다":"🔍","타다":"🚌","피다":"🌸","힘들다":"😓"};
+var CONV={"인사/감사/소개":{i:"👋",t:[{k:"안녕하세요?",d:"Apa Kabar?",p:"아빠 까바르",e:"🤝"},{k:"좋습니다",d:"Baik",p:"바익",e:"😊"},{k:"아침인사",d:"Selamat pagi",p:"슬라맛 빠기",e:"🌅"},{k:"낮인사",d:"Selamat siang",p:"슬라맛 시앙",e:"☀️"},{k:"오후인사",d:"Selamat sore",p:"슬라맛 소레",e:"🌇"},{k:"저녁인사",d:"Selamat malam",p:"슬라맛 말람",e:"🌙"},{k:"감사합니다",d:"Terima kasih",p:"뜨리마 까시",e:"🙏"},{k:"천만에요",d:"Sama-sama",p:"사마사마",e:"😊"},{k:"미안합니다",d:"Maaf",p:"마아프",e:"🙇"},{k:"괜찮아요",d:"Tidak apa-apa",p:"띠닥 아빠아빠",e:"👌"},{k:"제 이름은~",d:"Nama saya~",p:"나마 사야",e:"🙋"},{k:"만나서 반가워요",d:"Senang bertemu",p:"스낭 버르뜨무",e:"🤝"},{k:"또 만나요",d:"Sampai jumpa lagi",p:"삼빠이 줌빠 라기",e:"👋"},{k:"안녕히 가세요",d:"Selamat jalan",p:"슬라맛 잘란",e:"🚶"},{k:"네",d:"Ya",p:"야",e:"⭕"},{k:"아니요",d:"Tidak",p:"띠닥",e:"❌"},{k:"모르겠어요",d:"Saya tidak tahu",p:"사야 띠닥 따우",e:"🤷"},{k:"이해해요",d:"Saya mengerti",p:"사야 멍으르띠",e:"💡"}]},"공항/호텔":{i:"✈️",t:[{k:"관광입니다",d:"Untuk wisata",p:"운뚝 위사따",e:"🏖️"},{k:"5일 체류해요",d:"Tinggal selama lima hari",p:"띵갈 슬라마 리마 하리",e:"📅"},{k:"호텔에 묵어요",d:"Saya menginap di hotel",p:"사야 멍이납 디 호텔",e:"🏨"},{k:"환전하고 싶어요",d:"Saya mau tukar uang",p:"사야 마우 뚜까르 우앙",e:"💱"},{k:"예약했어요",d:"Saya sudah reservasi",p:"사야 수다 레세르바시",e:"📋"},{k:"하루 얼마예요?",d:"Berapa satu malam?",p:"버라빠 사뚜 말람",e:"💰"},{k:"체크아웃 할게요",d:"Saya mau check-out",p:"사야 마우 쳌아웃",e:"🧳"}]},"식사":{i:"🍽️",t:[{k:"메뉴판 주세요",d:"Tolong minta daftar menu",p:"똘롱 민따 답따르 메누",e:"📋"},{k:"이것 주세요",d:"Saya mau pesan ini",p:"사야 마우 뻐산 이니",e:"👆"},{k:"나시고렝 하나",d:"Nasi goreng satu",p:"나시 고렝 사뚜",e:"🍛"},{k:"물 주세요",d:"Minta air putih",p:"민따 아이르 뿌띠",e:"💧"},{k:"맛있어요!",d:"Enak!",p:"에낙",e:"😋"},{k:"매워요!",d:"Pedas!",p:"뻐다스",e:"🌶️"},{k:"계산서 주세요",d:"Minta bon",p:"민따 본",e:"🧾"},{k:"전부 얼마예요?",d:"Berapa semuanya?",p:"버라빠 스무아냐",e:"💰"}]},"교통/쇼핑":{i:"🚕",t:[{k:"여긴 어디예요?",d:"Ini di mana?",p:"이니 디 마나",e:"📍"},{k:"멀어요?",d:"Jauhkah dari sini?",p:"자우까 다리 시니",e:"🌍"},{k:"미터기 켜주세요",d:"Tolong pakai argo",p:"똘롱 빠까이 아르고",e:"🚖"},{k:"여기서 세워주세요",d:"Tolong berhenti di sini",p:"똘롱 버르헨띠 디 시니",e:"🖐️"},{k:"얼마예요?",d:"Berapa harganya?",p:"버라빠 하르가냐",e:"💲"},{k:"너무 비싸요",d:"Terlalu mahal",p:"떠를랄루 마할",e:"💸"},{k:"깎아주세요",d:"Bisa kurang?",p:"비사 꾸랑",e:"✂️"},{k:"이걸로 할게요",d:"Saya ambil ini",p:"사야 암빌 이니",e:"🛍️"}]},"사고/병원":{i:"🚨",t:[{k:"도와주세요!",d:"Tolong!",p:"똘롱",e:"🆘"},{k:"소매치기!",d:"Copet!",p:"쪼뻿",e:"🚨"},{k:"경찰 불러주세요",d:"Minta panggil polisi",p:"민따 빵길 뽈리시",e:"👮"},{k:"여권 잃어버렸어요",d:"Saya kehilangan paspor",p:"사야 끄힐랑안 빠스뽀르",e:"📕"},{k:"아파요",d:"Saya sakit",p:"사야 사낏",e:"🤒"},{k:"머리 아파요",d:"Kepala saya sakit",p:"끄빨라 사야 사낏",e:"🤕"},{k:"배 아파요",d:"Perut saya sakit",p:"뻐룻 사야 사낏",e:"🤢"},{k:"약국 어디예요?",d:"Di mana apotek?",p:"디 마나 아뽀떽",e:"💊"}]}};
+var VOCAB=[{k:"나/저",d:"Saya",p:"사야"},{k:"당신",d:"Anda",p:"안다"},{k:"그/그녀",d:"Dia",p:"디아"},{k:"우리",d:"Kami/Kita",p:"까미/끼따"},{k:"그들",d:"Mereka",p:"므레까"},{k:"이것",d:"Ini",p:"이니"},{k:"저것",d:"Itu",p:"이뚜"},{k:"먹다",d:"Makan",p:"마깐"},{k:"마시다",d:"Minum",p:"미눔"},{k:"가다",d:"Pergi",p:"뻐르기"},{k:"오다",d:"Datang",p:"다땅"},{k:"보다",d:"Lihat",p:"리핫"},{k:"듣다",d:"Dengar",p:"등아르"},{k:"말하다",d:"Bicara",p:"비짜라"},{k:"읽다",d:"Baca",p:"바짜"},{k:"쓰다",d:"Tulis",p:"뚤리스"},{k:"사다",d:"Beli",p:"블리"},{k:"팔다",d:"Jual",p:"주알"},{k:"주다",d:"Beri/Kasih",p:"브리/까시"},{k:"만들다",d:"Buat",p:"부앗"},{k:"원하다",d:"Mau/Ingin",p:"마우/잉인"},{k:"할수있다",d:"Bisa",p:"비사"},{k:"알다",d:"Tahu",p:"따우"},{k:"좋아하다",d:"Suka",p:"수까"},{k:"일하다",d:"Bekerja",p:"버끄르자"},{k:"자다",d:"Tidur",p:"띠두르"},{k:"열다",d:"Buka",p:"부까"},{k:"닫다",d:"Tutup",p:"뚜뚭"},{k:"기다리다",d:"Tunggu",p:"뚱구"},{k:"크다",d:"Besar",p:"브사르"},{k:"작다",d:"Kecil",p:"끄찔"},{k:"많다",d:"Banyak",p:"바냑"},{k:"적다",d:"Sedikit",p:"스디낏"},{k:"새로운",d:"Baru",p:"바루"},{k:"오래된",d:"Lama",p:"라마"},{k:"좋은",d:"Bagus",p:"바구스"},{k:"나쁜",d:"Buruk",p:"부룩"},{k:"비싼",d:"Mahal",p:"마할"},{k:"싼",d:"Murah",p:"무라"},{k:"뜨거운",d:"Panas",p:"빠나스"},{k:"차가운",d:"Dingin",p:"디응인"},{k:"맛있는",d:"Enak",p:"에낙"},{k:"매운",d:"Pedas",p:"뻐다스"},{k:"달콤한",d:"Manis",p:"마니스"},{k:"빠른",d:"Cepat",p:"쯔빳"},{k:"느린",d:"Lambat",p:"람밧"},{k:"기쁜",d:"Senang",p:"스낭"},{k:"슬픈",d:"Sedih",p:"스디"},{k:"화난",d:"Marah",p:"마라"},{k:"무서운",d:"Takut",p:"따꿋"},{k:"집",d:"Rumah",p:"루마"},{k:"학교",d:"Sekolah",p:"스꼴라"},{k:"병원",d:"Rumah sakit",p:"루마사낏"},{k:"시장",d:"Pasar",p:"빠사르"},{k:"물",d:"Air",p:"아이르"},{k:"밥/쌀",d:"Nasi",p:"나시"},{k:"돈",d:"Uang",p:"우앙"},{k:"길",d:"Jalan",p:"잘란"},{k:"차",d:"Mobil",p:"모빌"},{k:"사람",d:"Orang",p:"오랑"},{k:"친구",d:"Teman",p:"떼만"},{k:"아이",d:"Anak",p:"아낙"},{k:"가족",d:"Keluarga",p:"끌루아르가"},{k:"음식",d:"Makanan",p:"마까난"},{k:"음료",d:"Minuman",p:"미누만"},{k:"무엇",d:"Apa",p:"아빠"},{k:"누구",d:"Siapa",p:"시아빠"},{k:"어디",d:"Di mana",p:"디마나"},{k:"언제",d:"Kapan",p:"까빤"},{k:"왜",d:"Mengapa",p:"멍아빠"},{k:"어떻게",d:"Bagaimana",p:"바게이마나"},{k:"얼마",d:"Berapa",p:"버라빠"},{k:"그리고",d:"Dan",p:"단"},{k:"또는",d:"Atau",p:"아따우"},{k:"하지만",d:"Tetapi",p:"뜨따삐"},{k:"이미",d:"Sudah",p:"수다"},{k:"아직",d:"Belum",p:"블룸"},{k:"매우",d:"Sangat",p:"상앗"},{k:"아버지",d:"Ayah/Bapak",p:"아야/바빡"},{k:"어머니",d:"Ibu",p:"이부"},{k:"형/오빠",d:"Kakak laki-laki",p:"까깍 라끼라끼"},{k:"누나/언니",d:"Kakak perempuan",p:"까깍 쁘름뿌안"},{k:"남동생",d:"Adik laki-laki",p:"아딕 라끼라끼"},{k:"여동생",d:"Adik perempuan",p:"아딕 쁘름뿌안"}];
+var ANTO=[{k:'가깝다 ↔ 멀다',d:'dekat ↔ jauh',d1:'dekat',d2:'jauh',k1:'가깝다',k2:'멀다'},{k:'가늘다 ↔ 굵다',d:'tipis (garis) ↔ tebal (garis)',d1:'tipis (garis)',d2:'tebal (garis)',k1:'가늘다',k2:'굵다'},{k:'가볍다 ↔ 무겁다',d:'ringan ↔ berat',d1:'ringan',d2:'berat',k1:'가볍다',k2:'무겁다'},{k:'간단하다 ↔ 복잡하다',d:'Sederhana ↔ rumit',d1:'Sederhana',d2:'rumit',k1:'간단하다',k2:'복잡하다'},{k:'감다 ↔ 뜨다',d:'tutup (mata) ↔ buka (mata)',d1:'tutup (mata)',d2:'buka (mata)',k1:'감다',k2:'뜨다'},{k:'감다 ↔ 풀다',d:'menggulung ↔ melepaskan',d1:'menggulung',d2:'melepaskan',k1:'감다',k2:'풀다'},{k:'강하다/튼튼하다 ↔ 약하다',d:'kuat ↔ lemah',d1:'kuat',d2:'lemah',k1:'강하다/튼튼하다',k2:'약하다'},{k:'같다 ↔ 다르다',d:'sama ↔ beda',d1:'sama',d2:'beda',k1:'같다',k2:'다르다'},{k:'갚다 ↔ 빌리다',d:'membayar kembali ↔ meminjam',d1:'membayar kembali',d2:'meminjam',k1:'갚다',k2:'빌리다'},{k:'게으르다 ↔ 부지런하다',d:'malas ↔ rajin',d1:'malas',d2:'rajin',k1:'게으르다',k2:'부지런하다'},{k:'(배)고프다 ↔ (배)부르다',d:'lapar ↔ kenyang',d1:'lapar',d2:'kenyang',k1:'(배)고프다',k2:'(배)부르다'},{k:'관계없다 ↔ 관계있다',d:'tidak berhubungan ↔ berhubungan',d1:'tidak berhubungan',d2:'berhubungan',k1:'관계없다',k2:'관계있다'},{k:'기쁘다 ↔ 슬프다',d:'senang ↔ sedih',d1:'senang',d2:'sedih',k1:'기쁘다',k2:'슬프다'},{k:'길다 ↔ 짧다',d:'panjang ↔ pendek',d1:'panjang',d2:'pendek',k1:'길다',k2:'짧다'},{k:'깊다 ↔ 얕다',d:'dalam ↔ dangkal',d1:'dalam',d2:'dangkal',k1:'깊다',k2:'얕다'},{k:'깨끗하다 ↔ 더럽다',d:'Bersih ↔ kotor',d1:'Bersih',d2:'kotor',k1:'깨끗하다',k2:'더럽다'},{k:'깨다 ↔ 자다',d:'bangun ↔ tidur',d1:'bangun',d2:'tidur',k1:'깨다',k2:'자다'},{k:'끄다 ↔ 켜다',d:'matikan ↔ nyalakan',d1:'matikan',d2:'nyalakan',k1:'끄다',k2:'켜다'},{k:'끝나다 ↔ 시작되다',d:'selesai ↔ dimulai',d1:'selesai',d2:'dimulai',k1:'끝나다',k2:'시작되다'},{k:'끝내다 ↔ 시작하다',d:'menyelesaikan ↔ memulai',d1:'menyelesaikan',d2:'memulai',k1:'끝내다',k2:'시작하다'},{k:'나가다 ↔ 들어오다',d:'keluar ↔ masuk',d1:'keluar',d2:'masuk',k1:'나가다',k2:'들어오다'},{k:'나타나다 ↔ 사라지다',d:'muncul ↔ hilang',d1:'muncul',d2:'hilang',k1:'나타나다',k2:'사라지다'},{k:'날씬하다 ↔ 뚱뚱하다',d:'kurus ↔ Gemuk',d1:'kurus',d2:'Gemuk',k1:'날씬하다',k2:'뚱뚱하다'},{k:'날카롭다 ↔ 무디다',d:'Tajam ↔ tumpul',d1:'Tajam',d2:'tumpul',k1:'날카롭다',k2:'무디다'},{k:'남다 ↔ 모자라다',d:'tersisa ↔ kurang',d1:'tersisa',d2:'kurang',k1:'남다',k2:'모자라다'},{k:'낫다 ↔ 못하다',d:'lebih baik ↔ kurang',d1:'lebih baik',d2:'kurang',k1:'낫다',k2:'못하다'},{k:'낮다 ↔ 높다',d:'rendah ↔ tinggi',d1:'rendah',d2:'tinggi',k1:'낮다',k2:'높다'},{k:'낯설다 ↔ 낯익다',d:'asing ↔ akrab',d1:'asing',d2:'akrab',k1:'낯설다',k2:'낯익다'},{k:'내려가다 ↔ 올라가다',d:'turun ↔ Naik',d1:'turun',d2:'Naik',k1:'내려가다',k2:'올라가다'},{k:'넓다 ↔ 좁다',d:'lebar ↔ sempit',d1:'lebar',d2:'sempit',k1:'넓다',k2:'좁다'},{k:'느리다 ↔ 빠르다',d:'lambat ↔ cepat',d1:'lambat',d2:'cepat',k1:'느리다',k2:'빠르다'},{k:'늘다 ↔ 줄다',d:'bertambah ↔ berkurang',d1:'bertambah',d2:'berkurang',k1:'늘다',k2:'줄다'},{k:'늙다 ↔ 젊다',d:'tua ↔ muda',d1:'tua',d2:'muda',k1:'늙다',k2:'젊다'},{k:'늦다 ↔ 이르다',d:'terlambat ↔ lebih awal',d1:'terlambat',d2:'lebih awal',k1:'늦다',k2:'이르다'},{k:'닫다 ↔ 열다',d:'tutup ↔ buka',d1:'tutup',d2:'buka',k1:'닫다',k2:'열다'},{k:'달다 ↔ 쓰다',d:'Manis ↔ pahit',d1:'Manis',d2:'pahit',k1:'달다',k2:'쓰다'},{k:'당기다 ↔ 밀다',d:'Tarik ↔ Dorong',d1:'Tarik',d2:'Dorong',k1:'당기다',k2:'밀다'},{k:'더럽다 ↔ 깨끗하다',d:'kotor ↔ Bersih',d1:'kotor',d2:'Bersih',k1:'더럽다',k2:'깨끗하다'},{k:'더하다 ↔ 빼다',d:'tambah ↔ kurang',d1:'tambah',d2:'kurang',k1:'더하다',k2:'빼다'},{k:'덥다 ↔ 춥다',d:'panas ↔ dingin',d1:'panas',d2:'dingin',k1:'덥다',k2:'춥다'},{k:'두껍다 ↔ 얇다',d:'tebal ↔ tipis',d1:'tebal',d2:'tipis',k1:'두껍다',k2:'얇다'},{k:'주다(드리다) ↔ 받다',d:'memberi ↔ menerima',d1:'memberi',d2:'menerima',k1:'주다(드리다)',k2:'받다'},{k:'들다 ↔ 놓다',d:'mengangkat ↔ menaruh',d1:'mengangkat',d2:'menaruh',k1:'들다',k2:'놓다'},{k:'들어가다 ↔ 나오다',d:'masuk ↔ keluar',d1:'masuk',d2:'keluar',k1:'들어가다',k2:'나오다'},{k:'딱딱하다 ↔ 말랑하다',d:'keras ↔ lembut',d1:'keras',d2:'lembut',k1:'딱딱하다',k2:'말랑하다'},{k:'때리다 ↔ 맞다',d:'memukul ↔ dipukul',d1:'memukul',d2:'dipukul',k1:'때리다',k2:'맞다'},{k:'떠나다 ↔ 돌아오다',d:'meninggalkan ↔ Kembali',d1:'meninggalkan',d2:'Kembali',k1:'떠나다',k2:'돌아오다'},{k:'떠오르다 ↔ 지다',d:'terbit ↔ terbenam',d1:'terbit',d2:'terbenam',k1:'떠오르다',k2:'지다'},{k:'똑똑하다 ↔ 멍청하다',d:'pintar ↔ bodoh',d1:'pintar',d2:'bodoh',k1:'똑똑하다',k2:'멍청하다'},{k:'뜨겁다 ↔ 차갑다',d:'panas ↔ dingin',d1:'panas',d2:'dingin',k1:'뜨겁다',k2:'차갑다'},{k:'막히다 ↔ 뚫리다',d:'macet ↔ tembus',d1:'macet',d2:'tembus',k1:'막히다',k2:'뚫리다'},{k:'만나다 ↔ 헤어지다',d:'bertemu ↔ berpisah',d1:'bertemu',d2:'berpisah',k1:'만나다',k2:'헤어지다'},{k:'많다 ↔ 적다',d:'banyak ↔ sedikit',d1:'banyak',d2:'sedikit',k1:'많다',k2:'적다'},{k:'맑다 ↔ 탁하다',d:'bening ↔ keruh',d1:'bening',d2:'keruh',k1:'맑다',k2:'탁하다'},{k:'맛없다 ↔ 맛있다',d:'tidak enak ↔ enak',d1:'tidak enak',d2:'enak',k1:'맛없다',k2:'맛있다'},{k:'맞다 ↔ 틀리다',d:'benar ↔ salah',d1:'benar',d2:'salah',k1:'맞다',k2:'틀리다'},{k:'매다/묶다 ↔ 풀다',d:'mengikat ↔ melepaskan',d1:'mengikat',d2:'melepaskan',k1:'매다/묶다',k2:'풀다'},{k:'멀다 ↔ 가깝다',d:'jauh ↔ dekat',d1:'jauh',d2:'dekat',k1:'멀다',k2:'가깝다'},{k:'모르다 ↔ 알다',d:'tidak tahu ↔ tahu',d1:'tidak tahu',d2:'tahu',k1:'모르다',k2:'알다'},{k:'못생기다 ↔ 잘생기다/예쁘다',d:'jelek ↔ ganteng/cantik',d1:'jelek',d2:'ganteng/cantik',k1:'못생기다',k2:'잘생기다/예쁘다'},{k:'바쁘다 ↔ 한가하다',d:'sibuk ↔ senggang',d1:'sibuk',d2:'senggang',k1:'바쁘다',k2:'한가하다'},{k:'밝다 ↔ 어둡다',d:'terang ↔ gelap',d1:'terang',d2:'gelap',k1:'밝다',k2:'어둡다'},{k:'배우다 ↔ 가르치다',d:'belajar ↔ mengajarkan',d1:'belajar',d2:'mengajarkan',k1:'배우다',k2:'가르치다'},{k:'벗다 ↔ 입다/신다/쓰다',d:'melepaskan ↔ memakai',d1:'melepaskan',d2:'memakai',k1:'벗다',k2:'입다/신다/쓰다'},{k:'보내다 ↔ 받다',d:'mengirim ↔ menerima',d1:'mengirim',d2:'menerima',k1:'보내다',k2:'받다'},{k:'부드럽다 ↔ 거칠다',d:'halus ↔ kasar',d1:'halus',d2:'kasar',k1:'부드럽다',k2:'거칠다'},{k:'부족하다 ↔ 충분하다/넉넉하다',d:'kurang ↔ cukup',d1:'kurang',d2:'cukup',k1:'부족하다',k2:'충분하다/넉넉하다'},{k:'붙다 ↔ 떨어지다',d:'tempel ↔ jatuh',d1:'tempel',d2:'jatuh',k1:'붙다',k2:'떨어지다'},{k:'비다 ↔ 차다',d:'kosong ↔ penuh',d1:'kosong',d2:'penuh',k1:'비다',k2:'차다'},{k:'비슷하다 ↔ 다르다',d:'mirip ↔ beda',d1:'mirip',d2:'beda',k1:'비슷하다',k2:'다르다'},{k:'비싸다 ↔ 싸다/저렴하다',d:'mahal ↔ murah',d1:'mahal',d2:'murah',k1:'비싸다',k2:'싸다/저렴하다'},{k:'사다 ↔ 팔다',d:'membeli ↔ menjual',d1:'membeli',d2:'menjual',k1:'사다',k2:'팔다'},{k:'살다 ↔ 죽다/돌아가시다',d:'hidup ↔ mati/meninggal',d1:'hidup',d2:'mati/meninggal',k1:'살다',k2:'죽다/돌아가시다'},{k:'생기다 ↔ 사라지다',d:'terjadi ↔ hilang',d1:'terjadi',d2:'hilang',k1:'생기다',k2:'사라지다'},{k:'서투르다 ↔ 능숙하다',d:'tidak terampil ↔ terampil',d1:'tidak terampil',d2:'terampil',k1:'서투르다',k2:'능숙하다'},{k:'섞다 ↔ 분리하다',d:'mencampur ↔ membagi',d1:'mencampur',d2:'membagi',k1:'섞다',k2:'분리하다'},{k:'세다 ↔ 약하다',d:'keras ↔ lemah',d1:'keras',d2:'lemah',k1:'세다',k2:'약하다'},{k:'쉽다 ↔ 어렵다',d:'mudah ↔ sulit',d1:'mudah',d2:'sulit',k1:'쉽다',k2:'어렵다'},{k:'싫다 ↔ 좋다',d:'tidak suka ↔ suka',d1:'tidak suka',d2:'suka',k1:'싫다',k2:'좋다'},{k:'싱겁다 ↔ 짜다',d:'kurang asin ↔ asin',d1:'kurang asin',d2:'asin',k1:'싱겁다',k2:'짜다'},{k:'쓰다 ↔ 지우다',d:'menulis ↔ menghapus',d1:'menulis',d2:'menghapus',k1:'쓰다',k2:'지우다'},{k:'아프다 ↔ 낫다',d:'sakit ↔ sembuh',d1:'sakit',d2:'sembuh',k1:'아프다',k2:'낫다'},{k:'얼다 ↔ 녹다',d:'membeku ↔ meleleh',d1:'membeku',d2:'meleleh',k1:'얼다',k2:'녹다'},{k:'없다 ↔ 있다',d:'tidak ada ↔ ada',d1:'tidak ada',d2:'ada',k1:'없다',k2:'있다'},{k:'열리다 ↔ 닫히다',d:'terbuka ↔ tertutup',d1:'terbuka',d2:'tertutup',k1:'열리다',k2:'닫히다'},{k:'오다 ↔ 가다',d:'datang ↔ pergi',d1:'datang',d2:'pergi',k1:'오다',k2:'가다'},{k:'오르다 ↔ 내리다',d:'naik ↔ turun',d1:'naik',d2:'turun',k1:'오르다',k2:'내리다'},{k:'옳다 ↔ 그르다',d:'benar ↔ salah',d1:'benar',d2:'salah',k1:'옳다',k2:'그르다'},{k:'용감하다 ↔ 비겁하다',d:'berani ↔ pengecut',d1:'berani',d2:'pengecut',k1:'용감하다',k2:'비겁하다'},{k:'울다 ↔ 웃다',d:'menangis ↔ tertawa',d1:'menangis',d2:'tertawa',k1:'울다',k2:'웃다'},{k:'이기다 ↔ 지다',d:'menang ↔ kalah',d1:'menang',d2:'kalah',k1:'이기다',k2:'지다'},{k:'잃다 ↔ 얻다',d:'hilang ↔ mendapatkan',d1:'hilang',d2:'mendapatkan',k1:'잃다',k2:'얻다'},{k:'잊어버리다 ↔ 기억하다',d:'melupakan ↔ mengingat',d1:'melupakan',d2:'mengingat',k1:'잊어버리다',k2:'기억하다'},{k:'작다 ↔ 크다',d:'kecil ↔ besar',d1:'kecil',d2:'besar',k1:'작다',k2:'크다'},{k:'잘못하다 ↔ 잘하다',d:'bersalah ↔ berbuat baik',d1:'bersalah',d2:'berbuat baik',k1:'잘못하다',k2:'잘하다'},{k:'잠그다 ↔ 열다',d:'mengunci ↔ membuka',d1:'mengunci',d2:'membuka',k1:'잠그다',k2:'열다'},{k:'잡다 ↔ 놓다',d:'memegang ↔ lepas (tangan)',d1:'memegang',d2:'lepas (tangan)',k1:'잡다',k2:'놓다'},{k:'재미없다 ↔ 재미있다',d:'tidak seru ↔ seru',d1:'tidak seru',d2:'seru',k1:'재미없다',k2:'재미있다'},{k:'접다 ↔ 펴다',d:'melipat ↔ membuka',d1:'melipat',d2:'membuka',k1:'접다',k2:'펴다'},{k:'젖다 ↔ 마르다',d:'basah ↔ kering',d1:'basah',d2:'kering',k1:'젖다',k2:'마르다'},{k:'조용하다 ↔ 시끄럽다',d:'sepi ↔ berisik',d1:'sepi',d2:'berisik',k1:'조용하다',k2:'시끄럽다'},{k:'줄다 ↔ 늘다',d:'menyusut ↔ bertambah',d1:'menyusut',d2:'bertambah',k1:'줄다',k2:'늘다'},{k:'줍다 ↔ 버리다',d:'mengambil ↔ membuang',d1:'mengambil',d2:'membuang',k1:'줍다',k2:'버리다'},{k:'착하다 ↔ 나쁘다',d:'ramah ↔ tidak baik',d1:'ramah',d2:'tidak baik',k1:'착하다',k2:'나쁘다'},{k:'찾다 ↔ 잃어버리다',d:'mencari ↔ menghilangkan',d1:'mencari',d2:'menghilangkan',k1:'찾다',k2:'잃어버리다'},{k:'타다 ↔ 내리다',d:'naik ↔ turun',d1:'naik',d2:'turun',k1:'타다',k2:'내리다'},{k:'피다 ↔ 지다',d:'mekar ↔ gugur',d1:'mekar',d2:'gugur',k1:'피다',k2:'지다'},{k:'힘들다 ↔ 편하다',d:'sulit ↔ nyaman',d1:'sulit',d2:'nyaman',k1:'힘들다',k2:'편하다'}];
+var PP={"시간 전치사":{i:"⏰",t:[{k:"~에(시간)",d:"pada",p:"빠다",n:"pada jam 10"},{k:"~부터~까지",d:"dari~sampai~",p:"다리~삼빠이~"},{k:"~까지",d:"sampai/hingga",p:"삼빠이/힝가"},{k:"~이래로",d:"sejak",p:"스작"},{k:"~동안",d:"selama",p:"슬라마",n:"selama 3 hari"},{k:"~전에",d:"sebelum",p:"스블룸"},{k:"~후에",d:"setelah",p:"스뜰라"},{k:"~하는동안",d:"saat/ketika",p:"사앗/끄띠까"}]},"장소 전치사":{i:"📍",t:[{k:"~에서",d:"di",p:"디",n:"di rumah"},{k:"~위에",d:"di atas",p:"디 아따스"},{k:"~안에",d:"di dalam",p:"디 달람"},{k:"~로(방향)",d:"ke",p:"끄",n:"ke Jakarta"},{k:"~에서(출발)",d:"dari",p:"다리"},{k:"~에 도착",d:"tiba di",p:"띠바 디"}]},"위치 전치사":{i:"🧭",t:[{k:"~뒤에",d:"di belakang",p:"디 블라깡"},{k:"~옆에",d:"di samping",p:"디 삼삥"},{k:"~앞에",d:"di depan",p:"디 드빤"},{k:"~맞은편",d:"di seberang",p:"디 스브랑"},{k:"~아래에",d:"di bawah",p:"디 바와"},{k:"~사이에",d:"di antara",p:"디 안따라"},{k:"~안으로",d:"ke dalam",p:"끄 달람"},{k:"~밖으로",d:"ke luar",p:"끄 루아르"},{k:"~통해",d:"melalui",p:"믈랄루이"},{k:"~따라",d:"sepanjang",p:"스빤장"}]},"기타 전치사":{i:"🔗",t:[{k:"~으로(수단)",d:"dengan",p:"등안",n:"dengan mobil"},{k:"~없이",d:"tanpa",p:"딴빠"},{k:"~와 함께",d:"bersama",p:"버르사마"},{k:"~에 대해",d:"tentang",p:"뜬땅"},{k:"~위해",d:"untuk",p:"운뚝"},{k:"~때문에",d:"karena",p:"까르나"}]}};
+var NN=[{v:0,d:"Nol",p:"놀"},{v:1,d:"Satu",p:"사뚜"},{v:2,d:"Dua",p:"두아"},{v:3,d:"Tiga",p:"띠가"},{v:4,d:"Empat",p:"음빳"},{v:5,d:"Lima",p:"리마"},{v:6,d:"Enam",p:"으남"},{v:7,d:"Tujuh",p:"뚜주"},{v:8,d:"Delapan",p:"들라빤"},{v:9,d:"Sembilan",p:"슴빌란"},{v:10,d:"Sepuluh",p:"스뿔루"},{v:11,d:"Sebelas",p:"스블라스"},{v:12,d:"Dua belas",p:"두아블라스"},{v:13,d:"Tiga belas",p:"띠가블라스"},{v:14,d:"Empat belas",p:"음빳블라스"},{v:15,d:"Lima belas",p:"리마블라스"},{v:16,d:"Enam belas",p:"으남블라스"},{v:17,d:"Tujuh belas",p:"뚜주블라스"},{v:18,d:"Delapan belas",p:"들라빤블라스"},{v:19,d:"Sembilan belas",p:"슴빌란블라스"},{v:20,d:"Dua puluh",p:"두아뿔루"},{v:30,d:"Tiga puluh",p:"띠가뿔루"},{v:40,d:"Empat puluh",p:"음빳뿔루"},{v:50,d:"Lima puluh",p:"리마뿔루"},{v:60,d:"Enam puluh",p:"으남뿔루"},{v:70,d:"Tujuh puluh",p:"뚜주뿔루"},{v:80,d:"Delapan puluh",p:"들라빤뿔루"},{v:90,d:"Sembilan puluh",p:"슴빌란뿔루"},{v:100,d:"Seratus",p:"스라뚜스"},{v:200,d:"Dua ratus",p:"두아라뚜스"},{v:300,d:"Tiga ratus",p:"띠가라뚜스"},{v:400,d:"Empat ratus",p:"음빳라뚜스"},{v:500,d:"Lima ratus",p:"리마라뚜스"},{v:600,d:"Enam ratus",p:"으남라뚜스"},{v:700,d:"Tujuh ratus",p:"뚜주라뚜스"},{v:800,d:"Delapan ratus",p:"들라빤라뚜스"},{v:900,d:"Sembilan ratus",p:"슴빌란라뚜스"},{v:1e3,d:"Seribu",p:"스리부"},{v:2e3,d:"Dua ribu",p:"두아리부"},{v:3e3,d:"Tiga ribu",p:"띠가리부"},{v:4e3,d:"Empat ribu",p:"음빳리부"},{v:5e3,d:"Lima ribu",p:"리마리부"},{v:6e3,d:"Enam ribu",p:"으남리부"},{v:7e3,d:"Tujuh ribu",p:"뚜주리부"},{v:8e3,d:"Delapan ribu",p:"들라빤리부"},{v:9e3,d:"Sembilan ribu",p:"슴빌란리부"},{v:1e4,d:"Sepuluh ribu",p:"스뿔루리부"},{v:2e4,d:"Dua puluh ribu",p:"두아뿔루리부"},{v:3e4,d:"Tiga puluh ribu",p:"띠가뿔루리부"},{v:4e4,d:"Empat puluh ribu",p:"음빳뿔루리부"},{v:5e4,d:"Lima puluh ribu",p:"리마뿔루리부"},{v:6e4,d:"Enam puluh ribu",p:"으남뿔루리부"},{v:7e4,d:"Tujuh puluh ribu",p:"뚜주뿔루리부"},{v:8e4,d:"Delapan puluh ribu",p:"들라빤뿔루리부"},{v:9e4,d:"Sembilan puluh ribu",p:"슴빌란뿔루리부"},{v:1e5,d:"Seratus ribu",p:"스라뚜스리부"},{v:2e5,d:"Dua ratus ribu",p:"두아라뚜스리부"},{v:3e5,d:"Tiga ratus ribu",p:"띠가라뚜스리부"},{v:4e5,d:"Empat ratus ribu",p:"음빳라뚜스리부"},{v:5e5,d:"Lima ratus ribu",p:"리마라뚜스리부"},{v:6e5,d:"Enam ratus ribu",p:"으남라뚜스리부"},{v:7e5,d:"Tujuh ratus ribu",p:"뚜주라뚜스리부"},{v:8e5,d:"Delapan ratus ribu",p:"들라빤라뚜스리부"},{v:9e5,d:"Sembilan ratus ribu",p:"슴빌란라뚜스리부"},{v:1e6,d:"Satu juta",p:"사뚜주따"},{v:2e6,d:"Dua juta",p:"두아주따"},{v:3e6,d:"Tiga juta",p:"띠가주따"},{v:4e6,d:"Empat juta",p:"음빳주따"},{v:5e6,d:"Lima juta",p:"리마주따"},{v:6e6,d:"Enam juta",p:"으남주따"},{v:7e6,d:"Tujuh juta",p:"뚜주주따"},{v:8e6,d:"Delapan juta",p:"들라빤주따"},{v:9e6,d:"Sembilan juta",p:"슴빌란주따"},{v:1e8,d:"Seratus juta",p:"스라뚜스주따"},{v:9e8,d:"Sembilan ratus juta",p:"슴빌란라뚜스주따"}];
+var DY=[{k:"월요일",d:"Senin",p:"스닌"},{k:"화요일",d:"Selasa",p:"슬라사"},{k:"수요일",d:"Rabu",p:"라부"},{k:"목요일",d:"Kamis",p:"까미스"},{k:"금요일",d:"Jumat",p:"주맛"},{k:"토요일",d:"Sabtu",p:"삽뚜"},{k:"일요일",d:"Minggu",p:"밍구"}];
+var TM=[{k:"지금",d:"Sekarang",p:"스까랑"},{k:"오늘",d:"Hari ini",p:"하리이니"},{k:"내일",d:"Besok",p:"베속"},{k:"어제",d:"Kemarin",p:"끄마린"},{k:"아침",d:"Pagi",p:"빠기"},{k:"낮",d:"Siang",p:"시앙"},{k:"오후",d:"Sore",p:"소레"},{k:"밤",d:"Malam",p:"말람"},{k:"몇시?",d:"Jam berapa?",p:"잠 버라빠"}];
+
+var ns=[],it=[],ci=0,ok=new Set(),ng=new Set(),curKey='';
+function sv(){try{localStorage.setItem('indo_'+curKey,JSON.stringify({ci:ci,ok:Array.from(ok),ng:Array.from(ng)}))}catch(e){}}
+function ld(){try{var d=JSON.parse(localStorage.getItem('indo_'+curKey));if(d){ci=d.ci||0;ok=new Set(d.ok||[]);ng=new Set(d.ng||[]);return true}}catch(e){}return false}
+function ge(k){return EM[k]||AEM[k]||'📝'}
+function spk(t){if(!t&&it[ci])t=it[ci].d||it[ci].d1;if(!t)return;try{var u=new SpeechSynthesisUtterance(t);u.lang='id-ID';u.rate=0.8;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function ss(id){document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('a')});document.getElementById(id).classList.add('a')}
+function goBack(){if(ns.length>0)ns.pop()()}
+function uh(t,s,b){document.getElementById('hT').textContent=t;document.getElementById('hS').textContent=s||'';document.getElementById('bkB').style.display=b?'flex':'none';TP(document.querySelector('.hd'))}
+function up(i,t){var h=document.getElementById('hP');if(t>0){h.style.display='block';document.getElementById('pF').style.width=((i+1)/t*100)+'%';document.getElementById('pT').textContent=(i+1)+'/'+t}else h.style.display='none'}
+function fn(n){return n.toLocaleString('ko-KR')}
+
+function rM(){ns=[];uh('🇮🇩 인도네시아어 학습','Belajar Bahasa Indonesia',false);up(0,0);ss('sM');
+var g=document.getElementById('mG');g.innerHTML='';
+var menu=[
+['💬','기본 회화','c1',function(){var t=0;for(var k in CONV)t+=CONV[k].t.length;return '5주제 '+t+'문장'}(),function(){oCat()}],
+['📚','단어','c2','기본 '+VOCAB.length+'개 + 반대어 '+ANTO.length+'쌍',function(){oVocM()}],
+['🔗','전치사','c3',function(){var t=0;for(var k in PP)t+=PP[k].t.length;return '4주제 '+t+'개'}(),function(){oPS()}],
+['🔢','숫자','c4',NN.length+'개',function(){var ni=[];for(var i=0;i<NN.length;i++)ni.push({k:fn(NN[i].v),d:NN[i].d,p:NN[i].p});oCV('숫자','Angka','num',ni)}],
+['📅','요일','c5',DY.length+'개',function(){oCV('요일','Hari','day',DY)}],
+['⏰','시간','c6',TM.length+'개',function(){oCV('시간','Waktu','time',TM)}]
+];
+menu.forEach(function(x){var e=document.createElement('div');e.className='mc '+x[2]+' af';e.innerHTML='<span class="em">'+x[0]+'</span><div class="lb">'+x[1]+'</div><div class="cn">'+x[3]+'</div>';e.onclick=x[4];g.appendChild(e)});TP(g)}
+
+function oCat(){ns.push(rM);uh('💬 기본 회화','주제 선택',true);up(0,0);ss('sS');
+var l=document.getElementById('sL');l.innerHTML='';
+for(var k in CONV){(function(n,s){var e=document.createElement('div');e.className='si af';e.innerHTML='<span class="se">'+s.i+'</span><span class="sn">'+n+'</span><span class="sc">'+s.t.length+'문장</span>';e.style.borderLeftColor='#FF6B35';e.onclick=function(){oCV(n,'회화 > '+n,'conv_'+n,s.t)};l.appendChild(e)})(k,CONV[k])}TP(l)}
+
+function oVocM(){ns.push(rM);uh('📚 단어','Kosakata',true);up(0,0);ss('sS');
+var l=document.getElementById('sL');l.innerHTML='';
+[['📝','기본 단어',VOCAB.length+'개',function(){oCV('기본 단어','Kosakata Dasar','vocab_basic',VOCAB)}],
+['↔️','반대어',ANTO.length+'쌍',function(){oCV('반대어','Kata Antonim','vocab_anto',ANTO)}]
+].forEach(function(x){var e=document.createElement('div');e.className='si af';e.innerHTML='<span class="se">'+x[0]+'</span><span class="sn">'+x[1]+'</span><span class="sc">'+x[2]+'</span>';e.style.borderLeftColor='#118AB2';e.onclick=x[3];l.appendChild(e)});TP(l)}
+
+function oPS(){ns.push(rM);uh('🔗 전치사','Kata Depan',true);up(0,0);ss('sS');
+var l=document.getElementById('sL');l.innerHTML='';
+for(var k in PP){(function(n,s){var e=document.createElement('div');e.className='si af';e.innerHTML='<span class="se">'+s.i+'</span><span class="sn">'+n+'</span><span class="sc">'+s.t.length+'개</span>';e.style.borderLeftColor='#7B2D8E';e.onclick=function(){oCV(n,'전치사 > '+n,'prep_'+n,s.t)};l.appendChild(e)})(k,PP[k])}TP(l)}
+
+function oCV(t,s,key,items){var bk=ns[ns.length-1]||rM;ns.push(bk);it=items;curKey=key;
+if(!ld()){ci=0;ok=new Set();ng=new Set()}
+if(ci>=it.length)ci=0;
+uh(t,s,true);up(ci,items.length);ss('sC');
+document.getElementById('mbC').className='mb a';document.getElementById('mbL').className='mb';
+document.getElementById('lV').style.display='none';
+var cv=document.getElementById('cV');cv.style.display='block';
+restoreCard();rC();rL();rRB()}
+
+function restoreCard(){var cv=document.getElementById('cV');
+if(!cv.querySelector('.cw')){cv.innerHTML='<div class="sh"><span class="l">&larr; 외웠어요 &#10003;</span><span class="r">&#10007; 못 외웠어요 &rarr;</span></div><div class="cw" id="cwArea"><div class="co" id="cO"></div><div class="card" id="theCard"><div class="pic" id="cPic"></div><div class="indo" id="cIndo"></div><div class="pron" id="cPron"></div><div class="kor" id="cKor"></div><div class="ex" id="cEx"></div><div class="note" id="cNote"></div><button class="ab2" onclick="spk()">🔊</button><div class="swh">&larr; 밀어서 학습 &rarr;</div></div></div><div class="cn2"><button class="nb g" onclick="mOk()">&#10003;</button><button class="nb p" onclick="spk()">🔊</button><button class="nb r" onclick="mNo()">&#10007;</button></div>';TP(cv)}}
+
+function rC(){if(!it.length)return;var x=it[ci];
+var isAnto=!!x.d1;var pic,indo,pron,kor,ex='',note='';
+if(isAnto){pic=(AEM[x.k1]||'↔️');indo=x.d1+' ↔ '+x.d2;pron='';kor=x.k1+' ↔ '+x.k2;ex=x.d1+' = '+x.k1;note=x.d2+' = '+x.k2}
+else if(x.e){pic=x.e;indo=x.d;pron=x.p?'['+x.p+']':'';kor=x.k;ex='';note=x.n||''}
+else if(x.v!==undefined){pic='🔢';indo=x.d;pron=x.p?'['+x.p+']':'';kor=fn(x.v);ex='';note=''}
+else{pic=ge(x.k);indo=x.d;pron=x.p?'['+x.p+']':'';kor=x.k;ex='';note=x.n||''}
+document.getElementById('cPic').textContent=pic;
+document.getElementById('cIndo').textContent=indo;
+document.getElementById('cPron').textContent=pron;
+document.getElementById('cKor').textContent=kor;
+document.getElementById('cEx').textContent=ex;
+var ne=document.getElementById('cNote');ne.textContent=note;ne.style.display=note?'block':'none';
+document.getElementById('cO').className='co';up(ci,it.length);TP(document.getElementById('theCard'))}
+
+function mOk(){ok.add(ci);ng.delete(ci);sv();sOv('l');setTimeout(function(){if(ci<it.length-1){ci++;rC();sv()}else sDone();rRB()},300)}
+function mNo(){ng.add(ci);ok.delete(ci);sv();sOv('r');setTimeout(function(){if(ci<it.length-1){ci++;rC();sv()}else sDone();rRB()},300)}
+function sOv(d){var o=document.getElementById('cO');o.className='co';o.textContent=d==='l'?'✓':'✗';setTimeout(function(){o.classList.add(d==='l'?'gl':'gr')},10);setTimeout(function(){o.className='co'},250)}
+function sDone(){var cv=document.getElementById('cV');cv.innerHTML='<div class="es af"><span class="em">🎉</span><div class="ms" style="font-size:17px;font-weight:700;margin-bottom:6px">학습 완료!</div><div class="ms">✓ 외웠어요: '+ok.size+'개 &nbsp; ✗ 복습필요: '+ng.size+'개</div>'+(ng.size>0?'<button class="qnb" style="margin-top:12px" onclick="oRv()">🔄 복습하기 ('+ng.size+'개)</button>':'')+'<button class="qnb" style="margin-top:8px;background:#118AB2" onclick="resetCur()">🔄 처음부터</button><button class="qnb" style="margin-top:8px;background:#636E72" onclick="goBack()">← 돌아가기</button></div>';TP(cv)}
+function resetCur(){ci=0;ok=new Set();ng=new Set();sv();restoreCard();rC();rRB()}
+function rRB(){var a=document.getElementById('rBA');if(!a)return;if(ng.size>0){a.innerHTML='<div class="rb" onclick="oRv()"><span style="font-size:20px">🔄</span><div style="flex:1"><div style="font-weight:700;font-size:13px">복습 필요: '+ng.size+'개</div><div style="font-size:10px;opacity:.9">못 외운 단어 다시!</div></div><span>→</span></div>';TP(a)}else a.innerHTML=''}
+function oRv(){var ri=[];ng.forEach(function(i){if(it[i])ri.push(it[i])});if(!ri.length)return;it=ri;ci=0;ok=new Set();ng=new Set();curKey=curKey+'_rv';uh('🔄 복습','못 외운 단어',true);up(0,ri.length);var cv=document.getElementById('cV');cv.style.display='block';restoreCard();rC();rRB()}
+
+var tx=0,sw=false;
+document.addEventListener('touchstart',function(e){var c=document.getElementById('cwArea');if(!c||!c.contains(e.target))return;tx=e.touches[0].clientX;sw=true},{passive:true});
+document.addEventListener('touchmove',function(e){if(!sw)return;var dx=e.touches[0].clientX-tx;var o=document.getElementById('cO');if(!o)return;if(dx<-40){o.className='co gl';o.textContent='✓'}else if(dx>40){o.className='co gr';o.textContent='✗'}else o.className='co'},{passive:true});
+document.addEventListener('touchend',function(e){if(!sw)return;sw=false;var dx=e.changedTouches[0].clientX-tx;if(dx<-70)mOk();else if(dx>70)mNo();else{var o=document.getElementById('cO');if(o)o.className='co'}});
+
+function setMode(m){document.getElementById('mbC').className='mb'+(m==='c'?' a':'');document.getElementById('mbL').className='mb'+(m==='l'?' a':'');document.getElementById('cV').style.display=m==='c'?'block':'none';document.getElementById('lV').style.display=m==='l'?'block':'none';if(m==='l')rL()}
+function rL(f){var b=document.getElementById('lB');if(!b)return;b.innerHTML='';var fl=(f||'').toLowerCase();
+for(var i=0;i<it.length;i++){var x=it[i];var kk=x.k||x.k1||'',dd=x.d||x.d1||'',pp=x.p||'';
+if(fl&&kk.indexOf(fl)<0&&dd.toLowerCase().indexOf(fl)<0&&pp.indexOf(fl)<0)continue;
+var tr=document.createElement('tr');
+if(x.d1)tr.innerHTML='<td>'+x.k1+' ↔ '+x.k2+'</td><td style="color:#118AB2;font-size:11px">'+x.d1+' ↔ '+x.d2+'</td>';
+else if(x.v!==undefined)tr.innerHTML='<td>'+fn(x.v)+'</td><td style="color:#118AB2">'+x.d+'</td><td style="font-size:10px;color:#636E72">'+pp+'</td>';
+else tr.innerHTML='<td>'+kk+'</td><td style="color:#118AB2">'+dd+'</td><td style="font-size:10px;color:#636E72">'+pp+'</td>';
+tr.setAttribute('data-d',dd);tr.onclick=function(){spk(this.getAttribute('data-d'))};b.appendChild(tr)}TP(document.getElementById('lB'))}
+function fL(){rL(document.getElementById('lS').value)}
+
+document.addEventListener("DOMContentLoaded",function(){TP();rM()});
+</script>
+</body>
+</html>
